@@ -1,0 +1,12 @@
+---
+- name: Stubborn job to test terminationGracePeriodSeconds
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Run sleep that ignores SIGTERM
+      ansible.builtin.shell: |
+        trap '' TERM
+        sleep 120
+      args:
+        executable: /bin/bash
