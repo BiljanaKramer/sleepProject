@@ -4,6 +4,6 @@
   gather_facts: false
 
   tasks:
-    - name: Sleep for 60 seconds
+    - name: Sleep for 120 seconds
       ansible.builtin.pause:
-        seconds: 60
+        seconds: 120
